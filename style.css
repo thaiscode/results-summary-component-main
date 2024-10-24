@@ -1,41 +1,191 @@
 * {
-    margin: 0;
+    margin: 0; 
     padding: 0;
+    box-sizing: border-box;
 }
-
-:root {
-/*Primary*/
---light-red: hsl(0, 100%, 67%);
---orangey-yellow: hsl(39, 100%, 56%);
---green-teal: hsl(166, 100%, 37%);
---cobalt-blue: hsl(234, 85%, 45%);
-
-/*Neutral*/
---white: hsl(0, 0%, 100%);
---pale-blue: hsl(221, 100%, 96%);
---light-lavender: hsl(241, 100%, 89%);
---dark-gray-blue: hsl(224, 30%, 27%);
-
-/*Gradients*/
---background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
---circle: linear-gradient(hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
-}
-
+  
 img {
-    max-width: 100%;
+    max-width: 100%; 
     height: auto;
+    object-fit: contain;
+    padding-right: 0.5rem;
 }
-
+  
 body {
+    min-block-size: 100vh;
     font-size: 18px;
     font-family:"Hanken Grotesk", system-ui;
+    align-items: center;
+}
+  
+:root {
+    /*Primary*/
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /*Neutral*/
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /*Gradients*/
+    --background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --circle: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+main {
+    width: clamp(200px, 40vw, 500px);
+    max-width: 40vw;
+    margin: 0 auto;
+    justify-content: center;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--light-lavender);
+}
+
+h3 {
+    font-size: 0.8rem;
+}
+
+p {
+    font-size: 0.8rem;
+    color: var(--pale-blue);
+    font-weight: 500;
+}
+
+.result-card > h3 {
+    font-size: 1.4rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.result-card {
+    width: clamp(250px, 40%, 400px);
+    min-width: 250px;
+    background: var(--background);
+    border-radius: 25px;
+    text-align: center;
+    padding: 1.5rem 2rem;
+}
+
+.result-card > p {
+    margin: 1rem 0;
+    color: var(--light-lavender);
+}
+
+.result-card-score {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: var(--circle);
+    margin: 1.5rem auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result-card-score p {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 50px;
+}
+
+.result-card-score span {
+    color: hsla(241, 100%, 89%, 0.507);
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.summary-card {
+    width: clamp(250px, 40%, 400px);
+    min-width: 250px;
+    box-shadow: 25px 11px 50px -21px rgba(48,59,90,0.38);
+    border-radius: 0 25px 25px 0;
+    padding: 1rem;
+}
+
+.summary-card > h2 {
+    color: var(--dark-gray-blue);
+    font-weight: 800;
+    margin: 1rem 0.5rem;
+    text-align: left;
+}
+
+.summary-card-item  {
+    padding: 0.5rem;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 0.5rem;
+    align-items: center;
+}
+
+.summary-card-item > span {
+    align-items: center;
+} 
+
+.summary-card div:nth-child(2)  {
+    color: var(--light-red);
+    background-color: hsla(0, 100%, 67%, 0.096);
+}
+
+.summary-card div:nth-child(3)  {
+    color: var(--orangey-yellow);
+    background-color: hsla(39, 100%, 56%, 0.096);
+}
+
+.summary-card div:nth-child(4)  {
+    color: var(--green-teal);
+    background-color: hsla(166, 100%, 37%, 0.096);
+}
+
+.summary-card div:nth-child(5)  {
+    color: var(--cobalt-blue);
+    background-color: hsla(234, 85%, 45%, 0.096);
+}
+
+.summary-card-item > p{
+    color: hsla(224, 30%, 27%, 0.6);
+    font-weight: 700;
+}
+
+.summary-card-item > p span{
+    color: var(--dark-gray-blue);
+}
+
+button {
+    width: 94%;
+    background: var(--dark-gray-blue);
+    color: white;
+    border-radius: 25px;
+    padding: 0.7rem;
+    margin: 2rem 0.5rem 0.5rem 0.5rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.attribution > p{ 
+    font-size: 0.8rem; 
+    color: hsla(224, 30%, 27%, 0.788);
+}
+
+.attribution > p a { 
+    color: var(--dark-gray-blue); 
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1250px){
+    button:hover {
+        background: var(--background);
+    }
 }
