@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop](./screenshot.jpg)
-![Mobile](./screenshot.jpg)
+![Desktop](./desktop.png)
+![Mobile](./mobile.png)
 
 ### Links
 
@@ -41,6 +41,7 @@ Users should be able to:
 - Flexbox
 - BEM
 - Javascript vanilla
+- Json
 
 ## Author
 
