@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution](https://your-solution-url.com)
-- Live Site URL: [live site](https://your-live-site-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/responsive-component-using-flexbox-dkJnf3_HpH)
+- Live Site URL: [live site](https://thaiscode.github.io/results-summary-component-main/)
 
 ## My process
 
